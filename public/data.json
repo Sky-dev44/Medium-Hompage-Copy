@@ -1,0 +1,247 @@
+{
+  "posts": [
+    {
+      "id": "post_1",
+      "title": "OpenAI Just Proved Tesla's \"Full Self-Driving\" Can Never Work",
+      "subtitle": "No wonder Musk hates Altman...",
+      "author": {
+        "id": "author_1",
+        "name": "Will Lockett",
+        "avatar": "https://via.placeholder.com/40",
+        "verified": true
+      },
+      "publishedDate": "2d ago",
+      "readTime": 5,
+      "claps": 2300,
+      "responses": 75,
+      "imageUrl": "https://via.placeholder.com/300x200",
+      "tags": ["Technology", "AI", "Tesla"],
+      "featured": true
+    },
+    {
+      "id": "post_2",
+      "title": "These 15 Important Truths Will Teach You More Than Reading 100 Books",
+      "subtitle": "They can determine most of your life",
+      "author": {
+        "id": "author_2",
+        "name": "Thomas Oppong",
+        "avatar": "https://via.placeholder.com/40",
+        "verified": true
+      },
+      "collection": {
+        "name": "Personal Growth",
+        "logo": "https://via.placeholder.com/20"
+      },
+      "publishedDate": "Oct 2",
+      "readTime": 8,
+      "claps": 2200,
+      "responses": 62,
+      "imageUrl": "https://via.placeholder.com/300x200",
+      "tags": ["Self Improvement", "Life Lessons", "Personal Growth"],
+      "featured": true
+    },
+    {
+      "id": "post_3",
+      "title": "UX lessons from everyday life",
+      "subtitle": "Most people think of UX design as something that belongs to screens like apps, websites, dashboards, or maybe even VR...",
+      "author": {
+        "id": "author_3",
+        "name": "Hriday Checker",
+        "avatar": "https://via.placeholder.com/40",
+        "verified": false
+      },
+      "publishedDate": "Sep 22",
+      "readTime": 6,
+      "claps": 485,
+      "responses": 13,
+      "imageUrl": "https://via.placeholder.com/300x200",
+      "tags": ["UX Design", "Design", "User Experience"],
+      "featured": true
+    },
+    {
+      "id": "post_4",
+      "title": "The Future of Web Development: What to Expect in 2025",
+      "subtitle": "New frameworks and technologies reshaping the industry",
+      "author": {
+        "id": "author_4",
+        "name": "Sarah Chen",
+        "avatar": "https://via.placeholder.com/40",
+        "verified": true
+      },
+      "publishedDate": "1d ago",
+      "readTime": 7,
+      "claps": 1800,
+      "responses": 45,
+      "imageUrl": "https://via.placeholder.com/300x200",
+      "tags": ["Web Development", "Programming", "Technology"],
+      "featured": false
+    },
+    {
+      "id": "post_5",
+      "title": "Why I Quit My $500K Job at Meta",
+      "subtitle": "Sometimes money isn't everything",
+      "author": {
+        "id": "author_5",
+        "name": "Alex Rodriguez",
+        "avatar": "https://via.placeholder.com/40",
+        "verified": false
+      },
+      "publishedDate": "3d ago",
+      "readTime": 9,
+      "claps": 5600,
+      "responses": 234,
+      "imageUrl": "https://via.placeholder.com/300x200",
+      "tags": ["Career", "Tech", "Life"],
+      "featured": false
+    }
+  ],
+  "staffPicks": [
+    {
+      "id": "staff_1",
+      "title": "Repair Over Perfection: What I Learned When I Said the Wrong Thing",
+      "author": {
+        "id": "author_6",
+        "name": "Malynda Stewart, PhD, BCPA",
+        "avatar": "https://via.placeholder.com/40",
+        "credentials": "PhD, BCPA"
+      },
+      "publishedDate": "4d ago"
+    },
+    {
+      "id": "staff_2",
+      "title": "\"Can't believe I'm just a dateline to my friends.\"",
+      "author": {
+        "id": "author_7",
+        "name": "jael holzman",
+        "avatar": "https://via.placeholder.com/40"
+      },
+      "publishedDate": "Oct 26"
+    },
+    {
+      "id": "staff_3",
+      "title": "I Bought a Witches' Prison",
+      "author": {
+        "id": "author_8",
+        "name": "Jeff Maysh",
+        "avatar": "https://via.placeholder.com/40"
+      },
+      "publishedDate": "Oct 28, 2020",
+      "highlighted": true
+    }
+  ],
+  "recommendedTopics": [
+    {
+      "id": "topic_1",
+      "name": "Writing",
+      "slug": "writing"
+    },
+    {
+      "id": "topic_2",
+      "name": "Cryptocurrency",
+      "slug": "cryptocurrency"
+    },
+    {
+      "id": "topic_3",
+      "name": "Relationships",
+      "slug": "relationships"
+    },
+    {
+      "id": "topic_4",
+      "name": "Politics",
+      "slug": "politics"
+    },
+    {
+      "id": "topic_5",
+      "name": "Money",
+      "slug": "money"
+    },
+    {
+      "id": "topic_6",
+      "name": "Software Development",
+      "slug": "software-development"
+    },
+    {
+      "id": "topic_7",
+      "name": "Health",
+      "slug": "health"
+    }
+  ],
+  "whoToFollow": [
+    {
+      "id": "follow_1",
+      "name": "Gaddam.Naveen",
+      "avatar": "https://via.placeholder.com/40",
+      "bio": "Java Developer | scalable solutions | Sharing...",
+      "following": false
+    },
+    {
+      "id": "follow_2",
+      "name": "JavaScript in Plain English",
+      "avatar": "https://via.placeholder.com/40",
+      "bio": "New JavaScript and Web Development articles every day",
+      "following": false,
+      "verified": true
+    },
+    {
+      "id": "follow_3",
+      "name": "Better Programming",
+      "avatar": "https://via.placeholder.com/40",
+      "bio": "Advice for programmers.",
+      "following": false
+    }
+  ],
+  "navigation": {
+    "primary": [
+      {
+        "label": "Home",
+        "icon": "home",
+        "path": "/"
+      },
+      {
+        "label": "Library",
+        "icon": "bookmark",
+        "path": "/library"
+      },
+      {
+        "label": "Profile",
+        "icon": "person",
+        "path": "/profile"
+      },
+      {
+        "label": "Stories",
+        "icon": "document",
+        "path": "/stories"
+      },
+      {
+        "label": "Stats",
+        "icon": "stats",
+        "path": "/stats"
+      }
+    ],
+    "secondary": [
+      {
+        "label": "Following",
+        "icon": "people",
+        "path": "/following"
+      }
+    ]
+  },
+  "currentUser": {
+    "id": "user_current",
+    "name": "J",
+    "avatar": "https://via.placeholder.com/40",
+    "authenticated": true
+  },
+  "tabs": [
+    {
+      "id": "tab_1",
+      "label": "For you",
+      "active": true
+    },
+    {
+      "id": "tab_2",
+      "label": "Featured",
+      "active": false
+    }
+  ]
+}
