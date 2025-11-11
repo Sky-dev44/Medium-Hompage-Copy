@@ -2,14 +2,18 @@ import { FiMenu } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
 import { PiNotePencilLight } from "react-icons/pi";
 import { PiBellThin } from "react-icons/pi";
+import { useState } from "react";
 
-function Navbar() {
+function Navbar({ isOpen, setIsOpen }) {
   return (
-    <nav className="w-full h-14 border border-gray-200">
+    <nav className="w-full h-14 border border-gray-200 fixed z-50 top-0 left-0 right-0 bg-white">
       <div className="flex flex-row h-full ">
         <div className="flex-2 sm:flex-initial flex flex-row justify-around items-center ">
-          <div className="ml-6">
-            <FiMenu className="w-6 h-8 text-gray-400" />
+          <div className="ml-7">
+            <FiMenu
+              className="w-6 h-8 text-gray-400"
+              onClick={() => setIsOpen(!isOpen)}
+            />
           </div>
           <div className="mr-3">
             <img
