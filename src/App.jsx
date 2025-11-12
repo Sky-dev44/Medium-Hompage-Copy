@@ -1,23 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Profile from "./components/Profile";
+import BlogPost from "./components/BlogPost";
+import StaffPicks from "./components/StaffPicks";
 
 function App() {
-  const [sideOpen, setSideOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const [sideOpen, setSideOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
 
-  function handleSidebarClose() {
-    if (sideOpen) {
-      setSideOpen(false);
-    }
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch("http://localhost:5173/data.json");
 
-  function handleProfileClose() {
-    if (profileOpen) {
-      setProfileOpen(false);
-    }
-  }
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
+        const data = await res.json();
+        console.log("Fetched:", data);
+        setData(data);
+        setError(null);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -27,10 +45,22 @@ function App() {
         profileOpen={profileOpen}
         setProfileOpen={setProfileOpen}
       />
-      <div>
-        {sideOpen && <Sidebar isOpen={sideOpen} setIsOpen={setSideOpen} />}
+      {profileOpen && <Profile />}
 
-        {profileOpen && <Profile />}
+      <div className="flex">
+        <div className="xl:flex-4">
+          {sideOpen && (
+            <Sidebar sideOpen={sideOpen} setSideOpen={setSideOpen} />
+          )}
+        </div>
+
+        <div className="flex-12">
+          <BlogPost data={data} />
+        </div>
+
+        <div className="md:flex-6 hidden md:block">
+          <StaffPicks data={data} />
+        </div>
       </div>
     </div>
   );

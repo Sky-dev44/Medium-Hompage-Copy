@@ -6,7 +6,7 @@ import { PiStarFourFill } from "react-icons/pi";
 
 function Profile({ profileOpen, setProfileOpen }) {
   return (
-    <div className="w-63 h-140 md:h-110 border border-gray-200  mt-13 absolute right-8 z-100 bg-white rounded-md">
+    <div className="w-63 h-140 md:h-110 border border-gray-200  mt-13 absolute right-8 top-0 z-100 bg-white rounded-md">
       <div>
         <div className="flex flex-row mt-6 items-center ml-7">
           <div

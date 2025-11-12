@@ -6,8 +6,9 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { ImStatsBars2 } from "react-icons/im";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { AiOutlinePlus } from "react-icons/ai";
+import { useState } from "react";
 
-function Sidebar({ isOpen, setIsOpen }) {
+function Sidebar({ sideOpen, setSideOpen }) {
   return (
     <div className="w-60 h-screen border-r border-gray-200 fixed z-100 lg:z-40 top-0 left-0 bg-white transform-[matrix(1,0,0,1,0,0)] ">
       <div
@@ -20,13 +21,13 @@ function Sidebar({ isOpen, setIsOpen }) {
         >
           <div>
             <FiMenu
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setSideOpen(!sideOpen)}
               className="w-6 h-8 text-gray-400 hover:text-gray-900 cursor-pointer"
             />
           </div>
           <div className="mr-3">
             <img
-              className=" h-6 sm:h-6 sm:w-28 ml-5 sm:ml-4 cover"
+              className=" h-6 sm:h-6 sm:w-28 ml-5 sm:ml-4"
               src="/Logo.png"
               alt="Logo"
             />
@@ -73,7 +74,7 @@ function Sidebar({ isOpen, setIsOpen }) {
             Find writers and publications to follow.
           </span>
         </div>
-        <a className="ml-10 text-sm text-gray-500 hover:text-gray-900 cursor-pointer">
+        <a className="ml-10 text-sm text-gray-500 hover:text-gray-900 cursor-pointer underline">
           See suggestions
         </a>
       </div>
