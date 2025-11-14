@@ -11,7 +11,7 @@ function StaffPicks({ data, sideOpen }) {
   return (
     <div
       className={`sticky border-l border-gray-200 bg-white right-0 top-14  h-auto w-auto ${
-        sideOpen ? "xl:mr-8 lg:mr-4" : "xl:mr-8 2xl:mr-45 lg:mr-4"
+        sideOpen ? "xl:mr-35 2xl:mr-55 lg:mr-4" : "xl:mr-25 2xl:mr-75 lg:mr-4"
       }`}
     >
       <div className="pl-7">

@@ -42,7 +42,7 @@ function Navbar({ isOpen, setIsOpen, profileOpen, setProfileOpen }) {
 
         {/* right side */}
 
-        <div className=" flex flex-1 md:flex-inital flex-row items-center justify-around md:px-6 pr-4 ">
+        <div className=" flex flex-1 md:flex-intial flex-row items-center justify-around md:px-6 pr-4 ">
           <div className="flex items-center pr-2 cursor-pointer ">
             <PiNotePencilLight className="hidden md:block h-6 w-10 text-gray-500" />
             <p className="text-sm text-gray-500 hidden md:block">Write</p>

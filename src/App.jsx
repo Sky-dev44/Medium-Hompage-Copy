@@ -49,7 +49,11 @@ function App() {
       {profileOpen && <Profile />}
 
       <div className="flex">
-        <div className={` ${sideOpen ? "xl:flex-6" : "xl:flex-2"}`}>
+        <div
+          className={` ${
+            sideOpen ? "xl:flex-2 2xl:flex-6" : "xl:flex-4 2xl:flex-8"
+          }`}
+        >
           {sideOpen && (
             <Sidebar sideOpen={sideOpen} setSideOpen={setSideOpen} />
           )}
@@ -57,7 +61,7 @@ function App() {
 
         <div
           className={`md:flex-12 ${
-            sideOpen ? "xl:flex-4 2xl:flex-10" : "xl:flex-17"
+            sideOpen ? "xl:flex-6 2xl:flex-10" : "xl:flex-20 2xl:flex-18"
           }`}
         >
           <BlogPost sideOpen={sideOpen} data={data} />
@@ -65,7 +69,7 @@ function App() {
 
         <div
           className={`lg:flex-6 ${
-            sideOpen ? "xl:flex-11 2xl:flex-6" : "xl:flex-8"
+            sideOpen ? "xl:flex-2 2xl:flex-6" : "xl:flex-10 2xl:flex-13"
           } hidden lg:block `}
         >
           <StaffPicks data={data} sideOpen={sideOpen} />
