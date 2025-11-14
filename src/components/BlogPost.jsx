@@ -14,7 +14,7 @@ function BlogPost({ data, sideOpen }) {
   return (
     <div
       className={`${
-        sideOpen ? "xl:w-170 pl-5" : "xl:w-180"
+        sideOpen ? "xl:w-165 pl-5" : "xl:w-180"
       } w-auto  flex flex-col flex-wrap h-full  mt-14 bg-white`}
     >
       <div className="h-20 w-full bg-white">

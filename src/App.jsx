@@ -51,7 +51,7 @@ function App() {
       <div className="flex">
         <div
           className={` ${
-            sideOpen ? "xl:flex-2 2xl:flex-6" : "xl:flex-4 2xl:flex-8"
+            sideOpen ? "xl:flex-4 2xl:flex-6" : "xl:flex-4 2xl:flex-8"
           }`}
         >
           {sideOpen && (
@@ -61,14 +61,14 @@ function App() {
 
         <div
           className={`md:flex-12 ${
-            sideOpen ? "xl:flex-6 2xl:flex-10" : "xl:flex-20 2xl:flex-18"
+            sideOpen ? "xl:flex-4 2xl:flex-10" : "xl:flex-20 2xl:flex-18"
           }`}
         >
           <BlogPost sideOpen={sideOpen} data={data} />
         </div>
 
         <div
-          className={`lg:flex-6 ${
+          className={`lg:flex- ${
             sideOpen ? "xl:flex-2 2xl:flex-6" : "xl:flex-10 2xl:flex-13"
           } hidden lg:block `}
         >
