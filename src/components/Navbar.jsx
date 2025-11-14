@@ -8,7 +8,7 @@ function Navbar({ isOpen, setIsOpen, profileOpen, setProfileOpen }) {
   return (
     <nav className="w-full h-14 border border-gray-200 fixed z-50 top-0 left-0 right-0 bg-white">
       <div className="flex flex-row h-full ">
-        <div className="flex-6 sm:flex-initial flex flex-row justify-around items-center ">
+        <div className="flex-8 sm:flex-initial flex flex-row justify-around items-center ">
           <div className="ml-7 ">
             <FiMenu
               className="w-6 h-8 text-gray-400 cursor-pointer"
@@ -44,8 +44,8 @@ function Navbar({ isOpen, setIsOpen, profileOpen, setProfileOpen }) {
 
         <div className=" flex flex-1 md:flex-inital flex-row items-center justify-around md:px-6 pr-4 ">
           <div className="flex items-center pr-2 cursor-pointer ">
-            <PiNotePencilLight className="hidden md:block h-7 w-10 text-gray-500" />
-            <p className="text-sm hidden md:block">Write</p>
+            <PiNotePencilLight className="hidden md:block h-6 w-10 text-gray-500" />
+            <p className="text-sm text-gray-500 hidden md:block">Write</p>
           </div>
 
           <div className="px-5 cursor-pointer">

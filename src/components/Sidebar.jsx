@@ -6,11 +6,10 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { ImStatsBars2 } from "react-icons/im";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { AiOutlinePlus } from "react-icons/ai";
-import { useState } from "react";
 
 function Sidebar({ sideOpen, setSideOpen }) {
   return (
-    <div className="w-60 h-screen border-r border-gray-200 fixed z-100 lg:z-40 top-0 left-0 bg-white transform-[matrix(1,0,0,1,0,0)] ">
+    <div className="w-60 h-screen border-r border-gray-200 fixed z-100 xl:z-40 top-0 left-0 bg-white transform-[matrix(1,0,0,1,0,0)] ">
       <div
         className="w-45 border-b ml-7 h-80 border-gray-200 
       "

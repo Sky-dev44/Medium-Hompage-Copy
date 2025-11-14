@@ -24,6 +24,7 @@ function App() {
 
         const data = await res.json();
         console.log("Fetched:", data);
+
         setData(data);
         setError(null);
       } catch (error) {
@@ -48,18 +49,26 @@ function App() {
       {profileOpen && <Profile />}
 
       <div className="flex">
-        <div className="xl:flex-4">
+        <div className={` ${sideOpen ? "xl:flex-6" : "xl:flex-2"}`}>
           {sideOpen && (
             <Sidebar sideOpen={sideOpen} setSideOpen={setSideOpen} />
           )}
         </div>
 
-        <div className="flex-12">
-          <BlogPost data={data} />
+        <div
+          className={`md:flex-12 ${
+            sideOpen ? "xl:flex-4 2xl:flex-10" : "xl:flex-17"
+          }`}
+        >
+          <BlogPost sideOpen={sideOpen} data={data} />
         </div>
 
-        <div className="md:flex-6 hidden md:block">
-          <StaffPicks data={data} />
+        <div
+          className={`lg:flex-6 ${
+            sideOpen ? "xl:flex-11 2xl:flex-6" : "xl:flex-8"
+          } hidden lg:block `}
+        >
+          <StaffPicks data={data} sideOpen={sideOpen} />
         </div>
       </div>
     </div>

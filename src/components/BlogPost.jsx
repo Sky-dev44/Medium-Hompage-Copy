@@ -5,26 +5,30 @@ import { CiCircleMinus } from "react-icons/ci";
 import { MdOutlineBookmarkAdd } from "react-icons/md";
 import { MdMoreHoriz } from "react-icons/md";
 
-function BlogPost({ data }) {
+function BlogPost({ data, sideOpen }) {
   // Check if data and data.posts exist before mapping
   if (!data || !data.posts) {
     return <div>Loading posts...</div>;
   }
 
   return (
-    <div className="w-auto h-full border-r border-gray-200 mt-14 bg-white">
-      <div className="h-20 w-auto ">
-        <div className=" border-b mx-5 pt-10 pb-3 flex gap-6 text-sm border-gray-200">
+    <div
+      className={`${
+        sideOpen ? "xl:w-170 pl-5" : "xl:w-180"
+      } w-auto  flex flex-col flex-wrap h-full  mt-14 bg-white`}
+    >
+      <div className="h-20 w-full bg-white">
+        <div className=" bg-white border-b mx-5 pt-10 pb-3 flex gap-6 text-sm border-gray-200">
           <span>For you</span>
           <span>Featured</span>
         </div>
       </div>
 
       {data.posts.map((post) => (
-        <div className="w-auto">
+        <div className="w-auto flex flex-row border-b mx-6 border-gray-200 mt-8">
           <div
             key={post.id}
-            className="flex flex-col border-b border-gray-200 mx-5 mt-8 pb-5 gap-0"
+            className="flex flex-col flex-6 lg:mt-8 md:mr-15 pb-5 gap-0"
           >
             {/* author */}
             <div className="flex gap-2 items-center  ">
@@ -33,39 +37,47 @@ function BlogPost({ data }) {
             </div>
 
             {/* title, subtitle */}
-            <div className="flex gap-10 items-center">
-              <div className="flex-3 flex-wrap">
+            <div className="flex">
+              <div className="mr-5">
                 <h1 className="text-2xl font-bold">{post.title}</h1>
-                <p className="text-sm pt-2 text-gray-600">{post.subtitle}</p>
+                <p className="text-sm pt-2 mr-10 text-gray-600">
+                  {post.subtitle}
+                </p>
               </div>
-              <img src={post.imageUrl} className="w-40 h-25 flex-1 mr-" />
+
+              <div className="md:hidden block">
+                <img src={post.imageUrl} className="w-20 h-15" />
+              </div>
             </div>
 
             {/* icons */}
-            <div className="flex justify-between w-100 pt-4 ">
-              <div className="flex flex-row gap-4 text-xs text-gray-600">
-                <div className="flex items-center gap-1">
+            <div className="flex justify-between pt-6 ">
+              <div className="flex flex-row gap-4 text-lg text-gray-600">
+                <div className="flex items-center gap-4">
                   <PiStarFourFill className="text-amber-400" />
                   <span className="text-xs">{post.publishedDate}</span>
                 </div>
 
                 <div className="flex items-center gap-1">
-                  <FaHandsClapping />
+                  <FaHandsClapping className="text-base" />
                   <span className="text-xs">{post.claps}</span>
                 </div>
 
                 <div className="flex items-center gap-1">
-                  <FaComment />
+                  <FaComment className="text-base" />
                   <span className="text-xs">{post.responses}</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 text-xl text-gray-500">
+              <div className="flex items-center gap-4 text-2xl text-gray-500 ">
                 <CiCircleMinus />
                 <MdOutlineBookmarkAdd className="hidden md:block" />
                 <MdMoreHoriz />
               </div>
             </div>
+          </div>
+          <div className="lg:flex-2 lg:mt-10 hidden md:block ">
+            <img src={post.imageUrl} className="md:w-40 md:h-25" />
           </div>
         </div>
       ))}
