@@ -16,7 +16,7 @@ function App() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:5173/data.json");
+        const res = await fetch("/data.json");
 
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
